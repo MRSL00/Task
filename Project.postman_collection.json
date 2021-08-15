@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "75b5fcdf-f1e1-4728-aebe-d019bef13015",
+		"name": "Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get requirements",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/api/1.0.0/requirement/requirements?limit=1&skip=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"1.0.0",
+						"requirement",
+						"requirements"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "skip",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get requirement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/api/1.0.0/requirement/requirement?code=6118eee5958fc6531c1c1258",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"1.0.0",
+						"requirement",
+						"requirement"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "6118eee5958fc6531c1c1258"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "translate",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "translatetranslatetranslatetranslatetranslatetranslatetranslatetranslatetranslatetranslatetranslatetranslatetranslatetranslate",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"type": "file",
+							"src": "pexels-rahul-pandit-1212487.jpg"
+						}
+					]
+				},
+				"url": "http://localhost:7000/api/1.0.0/requirement"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cover",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/api/1.0.0/requirement/cover?id=611907c2b4b6d53084f79f4f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"1.0.0",
+						"requirement",
+						"cover"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "611907c2b4b6d53084f79f4f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
