@@ -7,10 +7,9 @@ app.use(logger("dev"));
 
 require("./db/mongoose");
 
-const port = 7000;
+const port = 8080;
 
 app.use("/", require("./router/api"));
 
-app.listen(port, () => {
-  console.log(`Server is up on port ${port}`);
-});
+app.listen(port, "APP_SERVER_PRIVATE_IP");
+console.log("Server running at http://APP_SERVER_PRIVATE_IP_ADDRESS:8080/");
